@@ -213,73 +213,76 @@
   <script src="/app/assets/dist/js/plugins.min.js?v=7"></script>
   <script src="/app/assets/dist/js/script.min.js?v=10"></script>
   <script>
-   async function fetchPosts() {
-  try {
-    const response = await fetch('http://localhost:3000/posts');
-    if (!response.ok) {
-      throw new Error('Network response was not ok ' + response.statusText);
+    async function fetchPosts() {
+      try {
+        // Reemplaza 'http://localhost:3000' con la URL de tu backend en producción
+        const response = await fetch('https://marion-backend-production.up.railway.app/posts');
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const posts = await response.json();
+        const postsContainer = document.getElementById('posts');
+        postsContainer.innerHTML = '';
+        posts.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.className = 'post';
+          postElement.innerHTML = `
+            <div class="post-content">
+              <h2 class="subtitulo">${post.title}</h2>
+              <p class="post-content">${post.content}</p>
+              <div class="post-actions">
+                <button class="like-button" data-id="${post._id}">
+                  <img src="uploads/img/icon/Like.png" alt="Like" />
+                  <span>${post.likes || 0}</span>
+                </button>
+                <button class="dislike-button" data-id="${post._id}">
+                  <img src="uploads/img/icon/Dislike.png" alt="Dislike" />
+                  <span>${post.dislikes || 0}</span>
+                </button>
+              </div>
+            </div>
+          `;
+          postsContainer.appendChild(postElement);
+        });
+    
+        document.querySelectorAll('.like-button').forEach(button => {
+          button.addEventListener('click', async (e) => {
+            const postId = e.currentTarget.getAttribute('data-id');
+            await updateLikeDislike(postId, 'like');
+          });
+        });
+    
+        document.querySelectorAll('.dislike-button').forEach(button => {
+          button.addEventListener('click', async (e) => {
+            const postId = e.currentTarget.getAttribute('data-id');
+            await updateLikeDislike(postId, 'dislike');
+          });
+        });
+    
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
     }
-    const posts = await response.json();
-    const postsContainer = document.getElementById('posts');
-    postsContainer.innerHTML = '';
-    posts.forEach(post => {
-      const postElement = document.createElement('div');
-      postElement.className = 'post';
-      postElement.innerHTML = `
-        <div class="post-content">
-          <h2 class="subtitulo">${post.title}</h2>
-          <p class="post-content">${post.content}</p>
-          <div class="post-actions">
-            <button class="like-button" data-id="${post._id}">
-              <img src="uploads/img/icon/Like.png" alt="Like" />
-              <span>${post.likes || 0}</span>
-            </button>
-            <button class="dislike-button" data-id="${post._id}">
-              <img src="uploads/img/icon/Dislike.png" alt="Dislike" />
-              <span>${post.dislikes || 0}</span>
-            </button>
-          </div>
-        </div>
-      `;
-      postsContainer.appendChild(postElement);
-    });
-
-    document.querySelectorAll('.like-button').forEach(button => {
-      button.addEventListener('click', async (e) => {
-        const postId = e.currentTarget.getAttribute('data-id');
-        await updateLikeDislike(postId, 'like');
-      });
-    });
-
-    document.querySelectorAll('.dislike-button').forEach(button => {
-      button.addEventListener('click', async (e) => {
-        const postId = e.currentTarget.getAttribute('data-id');
-        await updateLikeDislike(postId, 'dislike');
-      });
-    });
-
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-  }
-}
-
-async function updateLikeDislike(postId, action) {
-  try {
-    const response = await fetch(`http://localhost:3000/posts/${postId}/${action}`, {
-      method: 'POST'
-    });
-    if (!response.ok) {
-      throw new Error('Network response was not ok ' + response.statusText);
+    
+    async function updateLikeDislike(postId, action) {
+      try {
+        // Reemplaza 'http://localhost:3000' con la URL de tu backend en producción
+        const response = await fetch(`https://marion-backend-production.up.railway.app/posts/${postId}/${action}`, {
+          method: 'POST'
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        await fetchPosts(); // Actualizar los posts después de la actualización
+      } catch (error) {
+        console.error(`Error updating ${action}:`, error);
+      }
     }
-    await fetchPosts(); // Refresh posts after updating
-  } catch (error) {
-    console.error(`Error updating ${action}:`, error);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', fetchPosts);
-
-  </script>
+    
+    document.addEventListener('DOMContentLoaded', fetchPosts);
+    
+    </script>
+    
 
 </body>
 </html>

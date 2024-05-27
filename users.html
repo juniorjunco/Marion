@@ -309,10 +309,8 @@
 <script src="/app/assets/dist/js/script.min.js?v=10"></script>
 <script src="/app/assets/dist/js/languageSelector.js"></script>
 <script>
-
 // Inicializar AOS
 AOS.init();
-
 
 // Obtener referencias a los elementos
 const usernameElement = document.getElementById('username');
@@ -361,7 +359,8 @@ document.getElementById('postForm').addEventListener('submit', async function(e)
   const content = document.getElementById('content').value;
 
   try {
-    const response = await fetch('http://localhost:3000/posts', {
+    // Reemplazar 'http://localhost:3000' con la URL de tu backend en producción
+    const response = await fetch('https://marion-backend-production.up.railway.app/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -373,7 +372,7 @@ document.getElementById('postForm').addEventListener('submit', async function(e)
     if (response.ok) {
       alert('Post publicado exitosamente');
       document.getElementById('postForm').reset();
-      fetchPosts(); // Refresh posts after publishing
+      fetchPosts(); // Actualizar los posts después de publicar
     } else {
       const errorData = await response.json();
       alert(`Error publicando el post: ${errorData.message}`);
@@ -385,7 +384,7 @@ document.getElementById('postForm').addEventListener('submit', async function(e)
 
 async function fetchPosts() {
   try {
-    const response = await fetch('http://localhost:3000/posts');
+    const response = await fetch('https://marion-backend-production.up.railway.app/posts');
     if (!response.ok) {
       throw new Error('Network response was not ok ' + response.statusText);
     }
@@ -426,7 +425,7 @@ async function deletePost(event) {
   const postId = event.target.closest('button').dataset.id;
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`http://localhost:3000/posts/${postId}`, {
+    const response = await fetch(`https://marion-backend-production.up.railway.app/posts/${postId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -489,7 +488,7 @@ function showEditForm(event) {
 async function editPost(postId, title, content) {
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`http://localhost:3000/posts/${postId}`, {
+    const response = await fetch(`https://marion-backend-production.up.railway.app/posts/${postId}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,
