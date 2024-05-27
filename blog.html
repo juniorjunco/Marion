@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+
+  <!-- SHARE TAGS -->
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <!-- //SHARE TAGS -->
+
+  <!-- LAZYSIZES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="icon" href="uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/app/assets/dist/css/style.min.css?v=33">
+  <style>
+    .slide-mask {
+      top: initial;
+      padding: 200px 20px 100px 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    }
+    .slide-mask h2 {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 759px) {
+      body {
+        padding-top: 97px;
+      }
+      .menu-mobile ul li a:not(.rede):not(.header-langs-icon) {
+        font-size: 18px;
+      }
+      .slide-mask {
+        padding: 100px 20px 60px 20px;
+      }
+      .slide-mask h2 {
+        font-size: 1.15rem;
+      }
+    }
+    .modal-btn .btn::before { display: none; }
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .comment {
+      margin-top: 10px;
+      padding: 5px;
+      border-top: 1px solid #eee;
+    }
+    .campo-container {
+      margin-bottom: 10px;
+    }
+    .campo {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .btn-primario {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primario:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKHPFH3GD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NFKHPFH3GD');
+  </script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header-full">
+    <div class="container">
+      <div class="header-content">
+
+        <!-- LOGO -->
+        <a href="/index.html" title="Marion ve " class="header-logo colored-logo">
+          <img src="/uploads/img/loja_logo/24/d14156b350ef35f7dbf1d4d2780182c4.png" alt="Marion ve">
+        </a>
+        <a href="/index.html" title="Marion ve" class="header-logo white-logo">
+          <img src="/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png" alt="Marion ve">
+        </a>
+
+        <!-- DIREITA -->
+        <div class="header-direita">
+          <span class="menu-mobile-btn-wrap"></span>
+          <!-- IDIOMAS -->
+          <div class="header-langs">
+            <div class="header-langs-icon">
+                <img id="espaIcon" src="/app/thumbs-espa100.php" alt="Idioma">
+            </div>
+            <div class="header-langs-box">
+                <a href="/index-en.html" class="header-langs-icon" title="English" onclick="changeLanguage('en')"><img src="/app/thumbs-ingles80.php" alt="En"></a>
+                <a href="/index.html" class="header-langs-icon" title="Spanish" onclick="changeLanguage('es')"><img src="/app/thumbs-espa80.php" alt="Es"></a>
+            </div>
+        </div>
+          <!-- //IDIOMAS -->
+
+        </div>
+        <!-- //DIREITA -->
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div id="menu-mobile-btn" class="menu-mobile-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="menu-mobile" class="menu-mobile-wrapper">
+    <nav class="menu-mobile">
+      <ul class="menu-mobile-nav">
+        <li><a href="/index.html">Inicio</a></li>     
+        <li><a href="/blog.html">Blog</a></li>     
+        <li><a href="/biografia.html">Biografia</a></li>     
+        <li><a href="corporativo.html">Corporativo</a></li>
+        <li><a href="/proyectos.html">Proyectos</a></li>
+        <li><a href="/admin.html">Admin</a></li>     
+        <li><a href="/news.html">News</a></li>     
+        <li><a href="/contacto.html">Contacto</a></li>     
+        <li>
+          <div class="redes-sociais">
+            <span>Redes sociales</span>
+            <a href="https://www.instagram.com/marion.ve" target="_blank" class="rede" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- /.menu-mobile -->
+
+  <!-- BANNER TÍTULO -->
+  <section class="banner-titulo" style="background-image: url('/uploads/img/blog/blog-1.jpg');">
+    <span class="mascara"></span>
+    <div class="container">
+      <h1 class="titulo" data-aos="fade-up">Blog</h1>
+    </div>
+  </section>
+  <!-- //BANNER TÍTULO -->
+
+  <!-- PÁGINA -->
+<section class="">
+  <h1 class="titulo"><span>Posts</span></h1>
+</section>
+  <section >
+    <div class="secao">
+      <div class="container" id="posts"></div>
+        <h2  class="subtitulo left palestra-st"></h2>
+        <p class="texto"></p>
+    </div>
+  </section>
+  <!-- //PÁGINA -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- LOGO -->
+        <div class="footer-bloco footer-logo">
+          <a href="/" title="Marion">
+            <img src="/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png" alt="Marion Ve">
+          </a>
+        </div>
+        <!-- //LOGO -->
+
+        <!-- TEXTO -->
+        <div class="footer-bloco footer-texto">
+          <h3>Para más información y solicitudes envíe un correo electrónico a:</h3>
+          <a href="mailto:info@studiokobra.com.br" class="footer-email"><i class="far fa-envelope"></i> Marionve@gmail.com</a>
+          <h4>Marion Ve &copy - 2024 - Todos los derechos reservados - By <a href="https://www.juniorjunco.com.co/" target="_blank">Junior Junco</a></h4>
+        </div>
+        <!-- //TEXTO -->
+
+        <!-- REDES SOCIAIS -->
+        <div class="footer-bloco redes-sociais">
+          <a href="https://www.instagram.com/marion.ve" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <!-- //REDES SOCIAIS -->
+
+      </div>
+    </div>
+  </footer>
+  <!-- //FOOTER -->
+
+  <!-- SCRIPTS -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=initRecaptcha&render=explicit" async defer></script>
+  <script src="/app/assets/dist/js/plugins.min.js?v=7"></script>
+  <script src="/app/assets/dist/js/script.min.js?v=10"></script>
+  <script>
+   async function fetchPosts() {
+  try {
+    const response = await fetch('http://localhost:3000/posts');
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    const posts = await response.json();
+    const postsContainer = document.getElementById('posts');
+    postsContainer.innerHTML = '';
+    posts.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.className = 'post';
+      postElement.innerHTML = `
+        <div class="post-content">
+          <h2 class="subtitulo">${post.title}</h2>
+          <p class="post-content">${post.content}</p>
+          <div class="post-actions">
+            <button class="like-button" data-id="${post._id}">
+              <img src="uploads/img/icon/Like.png" alt="Like" />
+              <span>${post.likes || 0}</span>
+            </button>
+            <button class="dislike-button" data-id="${post._id}">
+              <img src="uploads/img/icon/Dislike.png" alt="Dislike" />
+              <span>${post.dislikes || 0}</span>
+            </button>
+          </div>
+        </div>
+      `;
+      postsContainer.appendChild(postElement);
+    });
+
+    document.querySelectorAll('.like-button').forEach(button => {
+      button.addEventListener('click', async (e) => {
+        const postId = e.currentTarget.getAttribute('data-id');
+        await updateLikeDislike(postId, 'like');
+      });
+    });
+
+    document.querySelectorAll('.dislike-button').forEach(button => {
+      button.addEventListener('click', async (e) => {
+        const postId = e.currentTarget.getAttribute('data-id');
+        await updateLikeDislike(postId, 'dislike');
+      });
+    });
+
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+  }
+}
+
+async function updateLikeDislike(postId, action) {
+  try {
+    const response = await fetch(`http://localhost:3000/posts/${postId}/${action}`, {
+      method: 'POST'
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    await fetchPosts(); // Refresh posts after updating
+  } catch (error) {
+    console.error(`Error updating ${action}:`, error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', fetchPosts);
+
+  </script>
+
+</body>
+</html>

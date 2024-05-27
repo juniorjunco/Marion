@@ -1,0 +1,214 @@
+// Botão padrão
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  background: rgba(#000, 0.1);
+  border: none;
+  border-radius: 25px;
+  font-family: $fonte_titulo;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $cor_fonte_escura;
+  text-align: center;
+  padding: 15px 30px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #111;
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation-duration: 0.7s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: rgba(#000, 0.15);
+
+    &::before {
+      animation-name: hvr-ripple-out;
+    }
+  }
+
+  // Inativo
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  // Outline
+  &.outline {
+    background: none;
+    border: 1px solid #ddd;
+    color: $cor_fonte_clara;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: #ddd;
+      color: $cor_fonte_escura;
+    }
+  }
+
+  // Botão primário
+  &.btn-primario {
+    background: $cor_primaria;
+    color: #fff;
+
+    &::before {
+      background: rgba($cor_primaria, 0.5);
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: darken($cor_primaria, 10%);
+    }
+
+    &.active:hover {
+      background: $cor_primaria;
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      border: 1px solid $cor_primaria;
+      color: $cor_primaria;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $cor_primaria;
+        color: #fff;
+      }
+    }
+  }
+
+  // Botão secundário
+  &.btn-secundario {
+    background: $cor_secundaria;
+    color: #fff;
+
+    &::before {
+      background: rgba($cor_secundaria, 0.5);
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: darken($cor_secundaria, 10%);
+    }
+
+    &.active:hover {
+      background: $cor_secundaria;
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      border: 1px solid $cor_secundaria;
+      color: $cor_secundaria;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $cor_secundaria;
+        color: #fff;
+      }
+    }
+  }
+
+  // Botão branco
+  &.btn-white {
+    border: 1px solid #fff;
+    background: #fff;
+    color: $cor_primaria;
+
+    &::before {
+      background: rgba(#fff, 0.5);
+    }
+
+    /* &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: transparent;
+      color: #fff;
+    } */
+
+    // Outline
+    &.outline {
+      background: none;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: #fff;
+        color: $cor_primaria;
+      }
+    }
+  }
+
+  // Botão pequeno
+  &.btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  // Botão grande
+  &.btn-lg {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+}
+
+// Botão container
+.btn-container {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0;
+  }
+}

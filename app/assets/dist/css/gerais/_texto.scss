@@ -1,0 +1,230 @@
+// Título
+.titulo {
+  float: left;
+  width: 100%;
+  position: relative;
+  font-family: $fonte_titulo;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: $cor_fonte_escura;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  // TABLET
+  @include mq(m) {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  // Linha inferior
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 3px;
+    background: rgba(#000, 0.1);
+
+    // MOBILE
+    @include mq(s) {
+      display: none !important;
+    }
+  }
+  &::before {
+    margin-right: 20px;
+  }
+  &::after {
+    margin-left: 20px;
+  }
+
+  // Linha à esquerda
+  &.left {
+    text-align: left;
+
+    &::before {
+      display: none;
+    }
+    &::after {
+      width: 150px;
+      background: linear-gradient(to right, rgba(#000, 0.3), transparent);
+    }
+  }
+}
+
+// Banner título
+.banner-titulo {
+  float: left;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 70px 0;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 40px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // Máscara
+  .mascara {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.8);
+
+    &.default {
+      background: rgba(#000, 0.5);
+    }
+  }
+  &.dark .mascara {
+    background: rgba(#000, 0.9);
+  }
+
+  .titulo {
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(#000, 0.2);
+
+    &::before,
+    &::after {
+      height: 2px;
+      background: rgba(#fff, 0.5);
+    }
+  }
+
+  .subtitulo {
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px rgba(#000, 0.2);
+  }
+}
+
+// Subtítulo
+.subtitulo {
+  float: left;
+  width: 100%;
+  position: relative;
+  font-family: $fonte_geral;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: $cor_fonte_escura;
+  margin-bottom: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 18px;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+// Texto geral
+.texto {
+  font-family: $fonte_geral;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $cor_fonte_clara;
+
+  &.center {
+    text-align: center;
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+    color: $cor_fonte_escura;
+  }
+
+  // Unresets para CKEDITOR
+  em {
+    font-style: italic !important;
+  }
+  ul {
+    list-style: disc outside none !important;
+    padding-left: 15px;
+  }
+  ol {
+    list-style: decimal outside none !important;
+    padding-left: 15px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  img {
+    display: inline-block;
+  }
+}
+
+// Texto (Sem registros)
+.empty {
+  text-align: center;
+  min-height: 100px;
+
+  span {
+    font-family: $fonte_geral;
+    font-size: 24px;
+    color: $cor_fonte_escura;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-family: $fonte_geral;
+    color: $cor_fonte_clara;
+  }
+
+  b {
+    font-weight: bold;
+    color: $cor_fonte_escura;
+  }
+}
+
+// Links
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+  outline: none;
+  text-decoration: none;
+}
+.link {
+  font-family: $fonte_geral;
+  transition: 0.2s;
+  color: $cor_primaria;
+
+  &:active,
+  &:focus,
+  &:visited {
+    color: $cor_primaria;
+  }
+
+  &:hover {
+    color: $cor_secundaria !important;
+  }
+}

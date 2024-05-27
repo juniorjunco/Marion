@@ -1,0 +1,277 @@
+// Footer geral
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 40px 0;
+  background: $cor_primaria;
+  overflow: hidden;
+}
+
+// Conteúdo container
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // MOBILE
+  @include mq(s) {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+// Coluna
+.footer-bloco {
+  &:not(:last-child) {
+    // MOBILE
+    @include mq(s) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// Logo
+.footer-logo {
+  max-width: 200px;
+  margin-right: 60px;
+
+  // MOBILE
+  @include mq(s) {
+    text-align: center;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+
+    // MOBILE
+    @include mq(s) {
+      max-width: 150px;
+    }
+  }
+}
+
+// Texto
+.footer-texto {
+  color: #fff;
+  margin-right: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  // E-mail
+  .footer-email {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: rgba(#fff, 0.7);
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(#fff, 0.7);
+
+    a {
+      color: rgba(#fff, 0.7);
+    }
+  }
+}
+
+// Redes sociais
+.redes-sociais {
+  text-align: left;
+
+  // MOBILE
+  @include mq(s) {
+    text-align: center;
+  }
+
+  // Item
+  a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      background: #fff;
+    }
+
+    i {
+      color: #fff;
+      font-size: 20px;
+      transition: 0.3s ease-out;
+    }
+    &:hover i {
+      color: $cor_primaria;
+    }
+  }
+}
+.footer-bloco.redes-sociais {
+  text-align: right;
+  width: 100%;
+  max-width: 140px;
+
+  // MOBILE
+  @include mq(s) {
+    text-align: center;
+  }
+
+  // Item
+  a {
+    width: 50px;
+    height: 50px;
+    line-height: 53px;
+    margin: 0;
+    margin-left: 10px;
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+// Voltar ao topo
+.gotop {
+  position: fixed;
+  z-index: $z_index_gotop;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba($cor_primaria, 0.8);
+  cursor: pointer;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  transform: translate3d(0, 20px, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background: rgba($cor_primaria, 1);
+  }
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    border-bottom: none;
+    border-right: none;
+    margin-top: 20px;
+  }
+}
+
+// Contatos laterais
+.contatos-laterais {
+  position: fixed;
+  z-index: $z_index_gotop;
+  top: 40%;
+  right: 20px;
+  /* transform: translate3d(20px, 0, 0);
+  opacity: 0;
+  visibility: hidden; */
+  transition: 0.3s ease-out;
+
+  // MOBILE
+  @include mq(s) {
+    top: inherit;
+    right: inherit;
+    left: 15px;
+    bottom: 40px;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  /* &.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  } */
+
+  // Item
+  > a {
+    position: relative;
+    display: inline-block;
+    margin: 5px 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #00ce6e;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+
+    // MOBILE
+    @include mq(s) {
+      margin: 0 5px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(#00ce6e, 0.5);
+      opacity: 0;
+    }
+    &:hover::before {
+      animation: contatos-pulse 0.5s;
+    }
+  }
+}
+@keyframes contatos-pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}

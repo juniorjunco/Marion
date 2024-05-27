@@ -1,0 +1,167 @@
+// Formulário
+.form-contato {
+  // Texto
+  .texto {
+    margin-bottom: 20px;
+  }
+}
+
+// Lateral
+.contato-lateral {
+  background: $cor_fundo2;
+  padding: 30px 20px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 20px;
+  }
+}
+
+// Lateral item
+.contato-item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  // Ícone
+  .contato-item-icon {
+    text-align: center;
+    i {
+      font-size: 28px;
+      color: $cor_primaria;
+    }
+  }
+
+  // Título
+  h3 {
+    color: $cor_fonte_escura;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  // Texto
+  p {
+    color: $cor_fonte_escura;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  // Link
+  a {
+    color: $cor_fonte_escura !important;
+  }
+}
+
+// Mapa
+.contato-mapa {
+  overflow: hidden;
+  margin-top: 40px;
+  border: 1px solid #ddd;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 20px;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 400px !important;
+    margin-bottom: -8px;
+
+    // MOBILE
+    @include mq(s) {
+      height: 250px !important;
+    }
+  }
+}
+
+// Bloco contato
+.bl-contato-wrapper {
+  text-align: center;
+  margin-bottom: 130px;
+  margin-top: 10px;
+}
+.bl-contato {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 4px;
+  background-color: $cor_fundo2;
+  font-size: 22px;
+  font-weight: 600;
+  color: $cor_fonte_escura;
+  transition: 0.3s ease-in-out;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: darken($cor_fundo2, 5%);
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  span {
+    display: inline-block;
+    line-height: 100%;
+    margin-top: -5px;
+  }
+}
+
+.lista-flex {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bloco-contato-geral {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  h2 {
+    color: $cor_fonte_escura;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    // MOBILE
+    @include mq(s) {
+      font-size: 18px;
+    }
+  }
+}
+
+.lista-bloco-contato {
+  margin-bottom: 30px;
+}
+
+.lista-bloco-contato-item {
+  font-weight: 400;
+  color: $cor_fonte_escura;
+  margin-bottom: 15px;
+  transition: 0.3s ease-out;
+  float: left;
+  width: 100%;
+
+  &:hover {
+    color: $cor_secundaria;
+  }
+
+  i {
+    color: $cor_primaria;
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}

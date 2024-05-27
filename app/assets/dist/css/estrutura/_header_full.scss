@@ -1,0 +1,290 @@
+// Header principal
+.header-full {
+  position: fixed;
+  z-index: $z_index_header;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 100%;
+  //background: rgba(#fff, 0.95);
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  transition: 0.5s ease;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 25px 0;
+    text-align: center;
+  }
+}
+.home-full .header-full {
+  //background: rgba($cor_primaria, 0.95);
+  background: $cor_primaria;
+}
+
+// Conteúdo (Container)
+.header-full .container {
+  position: static;
+}
+.header-full .header-content {
+  position: relative;
+  padding: 0 10px;
+
+  // MOBILE
+  @include mq(s) {
+    position: static;
+  }
+}
+
+// Logo
+.header-full .header-logo {
+  display: block;
+  float: left;
+  max-width: 150px;
+  will-change: transform;
+
+  // TABLET
+  @include mq(m) {
+    max-width: 120px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100px;
+  }
+
+  // Logo branco
+  &.white-logo {
+    display: none;
+  }
+}
+.home-full .header-full .header-logo {
+  // Logo colorido
+  &.colored-logo {
+    display: none;
+  }
+  // Logo branco
+  &.white-logo {
+    display: block;
+
+    // MOBILE
+    @include mq(s) {
+      display: inline-block;
+    }
+  }
+}
+
+// Direita
+.header-full .header-direita {
+  float: right;
+  margin-top: 17px;
+
+  // TABLET
+  @include mq(m) {
+    margin-top: 10px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    height: 0px;
+  }
+}
+
+// Botões
+.header-full .header-botoes {
+  float: right;
+  text-align: right;
+  margin-left: 30px;
+
+  // TABLET
+  @include mq(m) {
+    margin-left: 20px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 15px;
+    margin-left: 10px;
+
+    // MOBILE
+    @include mq(s) {
+      font-size: 12px;
+      margin: 5px;
+      padding: 10px 15px;
+    }
+  }
+}
+
+// Idiomas
+.header-langs {
+  position: relative;
+  float: right;
+  margin-top: 1px;
+  margin-left: 30px;
+  margin-right: 70px;
+  transition: 0.5s ease;
+
+  // MOBILE
+  @include mq(s) {
+    margin: 0;
+    position: absolute;
+    top: 32px;
+    left: 20px;
+  }
+}
+.header-langs-icon {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid $cor_primaria;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba($cor_primaria, 0.7);
+    transform: scale(1.05);
+  }
+}
+.home-full .header-langs-icon {
+  border-color: #fff;
+
+  &:hover {
+    border-color: rgba(#fff, 0.7);
+  }
+}
+.header-langs-box {
+  position: absolute;
+  top: 50px;
+  right: -10px;
+  z-index: 2;
+  text-align: center;
+  width: 170px;
+  background: $cor_secundaria;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -10px, 0);
+  transition: 0.2s ease-out;
+
+  // MOBILE
+  @include mq(s) {
+    right: initial;
+    left: -10px;
+  }
+
+  // Ponta
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 21px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent $cor_secundaria transparent;
+
+    // MOBILE
+    @include mq(s) {
+      right: initial;
+      left: 21px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+  }
+
+  .header-langs-icon {
+    display: inline-block;
+    margin: 3px;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+.header-langs:hover .header-langs-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+// ---------------------------- HOME ---------------------------- //
+body.home-full {
+  padding-top: 0px;
+}
+
+// Header
+.home-full .header-full:not(.active) {
+  background: none;
+  background-image: linear-gradient(to bottom, rgba(#000, 1), rgba(#000, 0));
+  box-shadow: none;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  // MOBILE
+  @include mq(s) {
+    padding-top: 35px;
+  }
+}
+
+// Logo
+.home-full .header-full:not(.active) .header-logo {
+  // Logo COLORIDO
+  &.colored-logo {
+    display: none;
+  }
+
+  // Logo BRANCO
+  &.white-logo {
+    display: block;
+
+    // MOBILE
+    @include mq(s) {
+      display: inline-block;
+      max-width: 100px;
+    }
+  }
+}
+
+// Menu lateral
+.home-full .header-full:not(.active) .lateral .fdx-menu-1-level > li > a {
+  color: #fff;
+}
+
+// Idiomas
+.home-full .header-full:not(.active) .header-langs {
+  // MOBILE
+  @include mq(s) {
+    top: 46px;
+  }
+}
+
+// Slide
+.home-full .slide-item .slide-content {
+  padding-top: 100px;
+}
