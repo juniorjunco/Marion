@@ -68,20 +68,8 @@
   </style>
   
   
-  <link rel="shortcut icon" href=""/>
+  <link rel="shortcut icon" href="https://marionve.netlify.app/"/>
 
-  <!-- Global site tag (gtag.js) - Google Analytics (ANTIGO) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171599834-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-171599834-1');
-    gtag('config', 'G-TFQECVJPVG'); // topnode
-  </script> -->
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKHPFH3GD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -135,19 +123,33 @@
 <div id="menu-mobile" class="menu-mobile-wrapper">
   <nav class="menu-mobile">
     <ul class="menu-mobile-nav">
-      <li><a href="/index.html">Inicio</a></li>     
-      <li><a href="/blog.html">Blog</a></li>     
-      <li><a href="/biografia.html">Biografia</a></li>     
-      <li><a href="corporativo.html">Corporativo</a></li>
-      <li><a href="/proyectos.html">Proyectos</a></li>
-      <li><a href="/admin.html">admin</a></li>     
-      <li><a href="/news.html">News</a></li>     
-      <li><a href="/contacto.html">Contacto</a></li>     
+      <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/news.html">News</a></li>		
+      <li><a href="/biografia.html">Biografia</a></li>
+      <li><a href="/proyectos.html">Arte</a></li>		
+      <li><a href="/direcciondeproyec.html">Dirección de Proyectos</a></li>
+      <li><a href="/corporativo.html">Corporativo</a></li>
+      <li><a href="/digitalesydiseño.html">Colaboraciones digitales y diseño</a></li>
+      <li><a href="/social.html">Social</a></li>
+      <li><a href="/patrociniosyapoyo.html">Patrocinios y Apoyos</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/admin.html">Admin</a></li>		
+      <li><a href="/contacto.html">Contacto</a></li>
       <li>
         <div class="redes-sociais">
-          <span>Redes sociales</span>
-          <a href="https://www.instagram.com/marion.ve" target="_blank" class="rede" title="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
+          <span>Redes Sociales</span>
+         
+          <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+            <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+          <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+            <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+          </a>
+          <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+            <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a>
+
+            <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+              <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>
+          </div>
       </li>
     </ul>
   </nav>
@@ -168,13 +170,7 @@
     <div class="container">
 
       <!-- FOTOS -->
-      <div class="grid-6 grid-s-12 palestras-fotos">
-        <ul>
-                      <li><img src="/uploads/img/admin/1.JPG" alt="admin"></li>
-                      <li><img src="/uploads/img/admin/2.JPG" alt="admin"></li>
-                      <li><img src="/uploads/img/admin/3.JPG" alt="admin"></li>
-                  </ul>
-      </div>
+      
       <!-- //FOTOS -->
 
       <!-- TEXTO -->
@@ -204,16 +200,7 @@
    <section class="secao">
     
   </section>
-  <!-- //INSTITUCIONAL -->
 
-  <!-- INSTAGRAM -->
-  
-  <!-- FOOTER -->
-  <!-- <div class="divider bottom left divider-footer">
-  <span></span>
-</div> -->
-
-<!-- FOOTER -->
 <footer class="footer">
 	<div class="container">
     <div class="footer-content">
@@ -237,10 +224,19 @@
       <!-- //TEXTO -->
 
       <!-- REDES SOCIALES -->
-      <div class="footer-bloco redes-sociais">
-                  
-                                  <a href="https://www.instagram.com/marion.ve/" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                      </div>
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+          <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+        <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+          <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+          <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a> 
+          
+          <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+            <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>
+                          
+      </div>
       <!-- //REDES SOCIAIS -->
 
     </div>
@@ -294,7 +290,7 @@
   const loginForm = document.getElementById('loginForm');
 
   // Obtener la URL base del backend
-  const backendUrl = 'https://marion-backend-production.up.railway.app/'; // Reemplaza esto con la URL de tu backend en producción
+  const backendUrl = 'https://blog-pro-gamma.vercel.app'; // Reemplaza esto con la URL de tu backend en producción
 
   // Manejar el envío del formulario de registro
   registerForm.addEventListener('submit', async (e) => {

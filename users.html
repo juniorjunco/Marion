@@ -76,20 +76,8 @@
   </style>
   
   
-  <link rel="shortcut icon" href=""/>
+  <link rel="shortcut icon" href="https://marionve.netlify.app/"/>
 
-  <!-- Global site tag (gtag.js) - Google Analytics (ANTIGO) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171599834-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-171599834-1');
-    gtag('config', 'G-TFQECVJPVG'); // topnode
-  </script> -->
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKHPFH3GD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -151,19 +139,33 @@
 <div id="menu-mobile" class="menu-mobile-wrapper">
   <nav class="menu-mobile">
     <ul class="menu-mobile-nav">
-      <li><a href="/index.html">Inicio</a></li>     
-      <li><a href="/blog.html">Blog</a></li>     
-      <li><a href="/biografia.html">Biografia</a></li>     
-      <li><a href="corporativo.html">Corporativo</a></li>
-      <li><a href="/proyectos.html">Proyectos</a></li>
-      <li><a href="/admin.html">admin</a></li>     
-      <li><a href="/news.html">News</a></li>     
-      <li><a href="/contacto.html">Contacto</a></li>     
+       <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/news.html">News</a></li>		
+      <li><a href="/biografia.html">Biografia</a></li>
+      <li><a href="/proyectos.html">Arte</a></li>		
+      <li><a href="/direcciondeproyec.html">Dirección de Proyectos</a></li>
+      <li><a href="/corporativo.html">Corporativo</a></li>
+      <li><a href="/digitalesydiseño.html">Colaboraciones digitales y diseño</a></li>
+      <li><a href="/social.html">Social</a></li>
+      <li><a href="/patrociniosyapoyo.html">Patrocinios y Apoyos</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/admin.html">Admin</a></li>		
+      <li><a href="/contacto.html">Contacto</a></li>
       <li>
         <div class="redes-sociais">
-          <span>Redes sociales</span>
-          <a href="https://www.instagram.com/marion.ve" target="_blank" class="rede" title="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
+          <span>Redes Sociales</span>
+         
+          <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+            <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+          <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+            <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+          </a>
+          <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+            <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a>
+
+            <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+              <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>
+          </div>
       </li>
     </ul>
   </nav>
@@ -174,7 +176,7 @@
   <section class="banner-titulo" style="background-image: url('/uploads/img/blog/blog-1.jpg');">
     <span class="mascara"></span>
     <div class="container">
-      <h1 class="titulo" data-aos="fade-up">blog admin</h1>
+      
     </div>
   </section>
   <!-- //BANNER TÍTULO -->
@@ -215,22 +217,40 @@
             <div class="campo-container"><textarea class="campo" id="content" placeholder="Contenido" required></textarea></div>
             <div class="btn-container"><button class="btn btn-primario" type="submit">Publicar</button></div>
           </form>
+
+
         </div>
   </section>
+  </section> 
+
+  <section class="secao">
+    <h2 class="subtitulo">Noticia</h2>
+    <form id="news-form" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="image">
+       <div class="campo-container"><input class="campo" type="text" name="title" placeholder="Título"></div> 
+        <div class="campo-container"><textarea class="campo" name="description" placeholder="Descripción"></textarea></div>
+        <div class="btn-container"><button class="btn btn-primario" type="submit">Publicar</button></div>
+    </form>
+    
   </section>
 
-
-
-
-
-  <!-- //INSTITUCIONAL -->
-
-  <!-- INSTAGRAM -->
   
-  <!-- FOOTER -->
-  <!-- <div class="divider bottom left divider-footer">
-  <span></span>
-</div> -->
+
+  <section class="secao">
+    <div class="container">
+      <div id="news-container">
+        <!-- Aquí se cargarán las noticias -->
+      </div>
+      
+
+    </div>
+
+  </section>
+
+  
+ 
+  
+
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -256,10 +276,19 @@
       <!-- //TEXTO -->
 
       <!-- REDES SOCIALES -->
-      <div class="footer-bloco redes-sociais">
-                  
-                                  <a href="https://www.instagram.com/marion.ve/" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                      </div>
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+          <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+        <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+          <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+          <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a>     
+          
+          <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+            <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>
+                          
+      </div>
       <!-- //REDES SOCIAIS -->
 
     </div>
@@ -267,8 +296,6 @@
 </footer>
 <!-- //FOOTER -->
 
-<!-- GERAIS -->
-<!-- VOLTAR AO TOPO -->
 <div class="gotop"></div>
 
 <!-- LOADING -->
@@ -360,7 +387,7 @@ document.getElementById('postForm').addEventListener('submit', async function(e)
 
   try {
     // Reemplazar 'http://localhost:3000' con la URL de tu backend en producción
-    const response = await fetch('https://marion-backend-production.up.railway.app/posts', {
+    const response = await fetch('https://blog-pro-gamma.vercel.app/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -384,7 +411,7 @@ document.getElementById('postForm').addEventListener('submit', async function(e)
 
 async function fetchPosts() {
   try {
-    const response = await fetch('https://marion-backend-production.up.railway.app/posts');
+    const response = await fetch('https://blog-pro-gamma.vercel.app/posts');
     if (!response.ok) {
       throw new Error('Network response was not ok ' + response.statusText);
     }
@@ -425,7 +452,7 @@ async function deletePost(event) {
   const postId = event.target.closest('button').dataset.id;
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`https://marion-backend-production.up.railway.app/posts/${postId}`, {
+    const response = await fetch(`https://blog-pro-gamma.vercel.app/posts/${postId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -442,31 +469,32 @@ async function deletePost(event) {
   }
 }
 
+// Función para mostrar el formulario de edición de posts
 function showEditForm(event) {
   const postId = event.target.closest('button').dataset.id;
   const postElement = event.target.closest('.post');
-  const title = postElement.querySelector('h2').textContent;
-  const content = postElement.querySelector('p').textContent;
+  const title = postElement.querySelector('.post-title').textContent;
+  const content = postElement.querySelector('.post-text').textContent;
 
-  // Create an edit form
+  // Crear un formulario de edición
   const editForm = document.createElement('form');
   editForm.className = 'edit-form';
   editForm.innerHTML = `
     <input class="campo" type="text" name="title" value="${title}" required>
     <textarea class="campo" name="content" required>${content}</textarea>
-    <button class="btn btn-primario" type="submit">Guardar</button>
-    <button class="btn btn-primario" type="button" class="cancel-edit">Cancelar</button>
+    <button class=" " type="submit">Guardar</button>
+    <button class="cancel-edit" type="button">Cancelar</button>
   `;
   postElement.innerHTML = '';
   postElement.appendChild(editForm);
 
-  // Add event listener to submit the edit form
+  // Añadir listener para el envío del formulario de edición
   editForm.addEventListener('submit', (e) => {
     e.preventDefault();
     editPost(postId, editForm.title.value, editForm.content.value);
   });
 
-  // Add event listener to cancel the edit
+  // Añadir listener para cancelar la edición
   editForm.querySelector('.cancel-edit').addEventListener('click', () => {
     postElement.innerHTML = `
       <div class="post-content"> 
@@ -480,6 +508,7 @@ function showEditForm(event) {
         <img src="/uploads/img/icon/remove.svg" alt="Eliminar">
       </button>
     `;
+    // Reanudar los event listeners para los botones
     postElement.querySelector('.edit-post').addEventListener('click', showEditForm);
     postElement.querySelector('.delete-post').addEventListener('click', deletePost);
   });
@@ -488,7 +517,7 @@ function showEditForm(event) {
 async function editPost(postId, title, content) {
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`https://marion-backend-production.up.railway.app/posts/${postId}`, {
+    const response = await fetch(`https://blog-pro-gamma.vercel.app/posts/${postId}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -506,7 +535,232 @@ async function editPost(postId, title, content) {
   }
 }
 
+
+
 document.addEventListener('DOMContentLoaded', fetchPosts);
+
+
+// Limitar el tamaño del archivo a 5MB
+
+
+// Seleccionar el input de archivo y manejar el evento de cambio
+const fileInput = document.getElementById('file-input');
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (file && file.size > 5 * 1024 * 1024) {
+    alert('El archivo es demasiado grande. Selecciona un archivo de 5MB o menos.');
+    fileInput.value = '';
+  }
+});
+
+// Manejar el envío del formulario para publicar noticias
+document.getElementById('news-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+  const token = localStorage.getItem('token');
+
+  if (!token) {
+    alert('No estás autenticado. Por favor, inicia sesión.');
+    window.location.href = 'index.html';
+    return;
+  }
+
+  try {
+    const response = await fetch('https://blog-pro-gamma.vercel.app/news', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const result = await response.json();
+    if (result.success) {
+      alert('Noticia publicada exitosamente');
+      loadNewsEs(); // Cargar las noticias nuevamente
+    } else {
+      alert('Error al publicar la noticia');
+    }
+  } catch (error) {
+    alert(`Error: ${error.message}`);
+  }
+});
+
+// Función para cargar noticias en español
+async function loadNewsEs() {
+  try {
+    const response = await fetch('https://blog-pro-gamma.vercel.app/news');
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    const news = await response.json();
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
+
+    news.forEach(item => {
+      const newsItem = document.createElement('div');
+      newsItem.classList.add('news-item');
+
+      // Formatear la fecha para mostrarla de manera legible
+      const formattedDate = new Date(item.date).toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      newsItem.innerHTML = `
+        <img src="${item.image || 'default-image-url.jpg'}" alt="${item.title}" class="news-image">
+        <div class="news-content">
+          <h2 class="news-title">${item.title}</h2>
+          <p class="news-date">${formattedDate}</p> <!-- Mostrar la fecha aquí -->
+          <p class="news-description">${item.description}</p>
+        </div>
+        <div class="news-buttons">
+          <button class="edit-news" data-id="${item._id}">
+            <img src="/uploads/img/icon/editar.svg" alt="Editar">
+          </button>
+          <button class="delete-news" data-id="${item._id}">
+            <img src="/uploads/img/icon/remove.svg" alt="Eliminar">
+          </button>
+        </div>
+      `;
+      newsContainer.appendChild(newsItem);
+    });
+
+    // Event listeners for edit and delete
+    document.querySelectorAll('.delete-news').forEach(button => {
+      button.addEventListener('click', deleteNews);
+    });
+    document.querySelectorAll('.edit-news').forEach(button => {
+      button.addEventListener('click', showEditFormNews);
+    });
+  } catch (error) {
+    console.error('Error loading news:', error);
+  }
+}
+
+// Función para mostrar el formulario de edición de noticias
+function showEditFormNews(event) {
+  const newsId = event.target.closest('button').dataset.id;
+  const newsItem = event.target.closest('.news-item');
+  const title = newsItem.querySelector('.news-title').textContent;
+  const description = newsItem.querySelector('.news-description').textContent;
+  const image = newsItem.querySelector('.news-image').src;
+  const date = newsItem.querySelector('.news-date').textContent; // Obtener la fecha
+
+  // Crear un formulario de edición
+  const editForm = document.createElement('form');
+  editForm.className = 'edit-form-news';
+  editForm.innerHTML = `
+    <input class="campo-news" type="text" name="title" value="${title}" required>
+    <textarea class="campo-news" name="description" required>${description}</textarea>
+    <input class="campo-news" type="text" name="date" value="${date}" disabled> <!-- Mostrar la fecha, pero deshabilitada -->
+    <button class="" type="submit">Guardar</button>
+    <button class="cancel-edit-news" type="button">Cancelar</button>
+  `;
+  newsItem.innerHTML = '';
+  newsItem.appendChild(editForm);
+
+  // Añadir un listener para el envío del formulario de edición
+  editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    editNews(newsId, editForm.title.value, editForm.description.value);
+  });
+
+  // Añadir un listener para cancelar la edición
+  editForm.querySelector('.cancel-edit-news').addEventListener('click', () => {
+    cancelEditNews(newsItem, title, description, image, date);
+  });
+}
+
+
+// Función para editar una noticia
+async function editNews(newsId, title, description) {
+  const formData = new FormData();
+  formData.append('title', title);
+  formData.append('description', description);
+
+  try {
+    const response = await fetch(`https://blog-pro-gamma.vercel.app/news/${newsId}`, {
+      method: 'PUT',
+      body: formData,
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    const data = await response.json();
+    if (data.success) {
+      alert('Noticia actualizada exitosamente');
+      loadNewsEs(); // Refresh news
+    } else {
+      alert('Error al actualizar la noticia');
+    }
+  } catch (error) {
+    console.error('Error en la solicitud:', error);
+  }
+}
+// Función para cancelar la edición de noticias
+function cancelEditNews(newsItem, title, description, image, date) {
+  // Restaurar el contenido original de la noticia
+  newsItem.innerHTML = `
+    <img src="${image}" alt="${title}" class="news-image">
+    <div class="news-content">
+      <h2 class="news-title">${title}</h2>
+      <p class="news-date">${date}</p> <!-- Restaurar la fecha -->
+      <p class="news-description">${description}</p>
+    </div>
+    <div class="news-buttons">
+      <button class="edit-news" data-id="${newsItem.dataset.id}">
+        <img src="/uploads/img/icon/editar.svg" alt="Editar">
+      </button>
+      <button class="delete-news" data-id="${newsItem.dataset.id}">
+        <img src="/uploads/img/icon/remove.svg" alt="Eliminar">
+      </button>
+    </div>
+  `;
+
+  // Re-attach event listeners
+  newsItem.querySelector('.edit-news').addEventListener('click', showEditFormNews);
+  newsItem.querySelector('.delete-news').addEventListener('click', deleteNews);
+}
+
+
+// Función para eliminar una noticia
+async function deleteNews(event) {
+  const newsId = event.target.closest('button').dataset.id;
+  const token = localStorage.getItem('token');
+  try {
+    const response = await fetch(`https://blog-pro-gamma.vercel.app/news/${newsId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    alert('Noticia eliminada exitosamente');
+    loadNewsEs(); // Refresh news
+  } catch (error) {
+    console.error('Error deleting news:', error);
+  }
+}
+
+// Cargar noticias al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  loadNewsEs(); // Cargar noticias en español
+});
+
 
 </script>
 

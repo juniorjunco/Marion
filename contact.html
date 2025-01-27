@@ -73,20 +73,9 @@
   </style>
   
   
-  <link rel="shortcut icon" href="https://subtle-sorbet-df6d90.netlify.app/"/>
+  <link rel="shortcut icon" href="https://marionve.netlify.app/"/>
 
-  <!-- Global site tag (gtag.js) - Google Analytics (ANTIGO) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171599834-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-171599834-1');
-    gtag('config', 'G-TFQECVJPVG'); // topnode
-  </script> -->
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKHPFH3GD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -112,10 +101,10 @@
 		<div class="header-content">
 
       <!-- LOGO -->
-      <a href="http://127.0.0.1:5500/index.html" title="Marion Ve" class="header-logo colored-logo">
+      <a href="/index.html" title="Marion Ve" class="header-logo colored-logo">
         <img src="/uploads/img/loja_logo/24/d14156b350ef35f7dbf1d4d2780182c4.png" alt="Marion Ve">
       </a>
-      <a href="http://127.0.0.1:5500/index.html" title="Marion VeS" class="header-logo white-logo">
+      <a href="/index.html" title="Marion VeS" class="header-logo white-logo">
         <img src="/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png" alt="Marion Ve">
       </a>
 
@@ -153,26 +142,37 @@
 
 <!-- Menu mobile -->
 <div id="menu-mobile" class="menu-mobile-wrapper">
-    <nav class="menu-mobile">
-      <ul class="menu-mobile-nav">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/biografia.html">Biography</a></li>
-          <li><a href="corporativo.html">Corporative</a></li>
-          <li><a href="/proyectos.html">Projects</a></li>
-          <li><a href="/admin.html">Admin</a></li>
-          <li><a href="/news.html">News</a></li>
-          <li><a href="/contacto.html">Contact</a></li>
-        <li>
-          <div class="redes-sociais">
-            <span>Social Media</span>
-                  
-                                            <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram"><i class="fab fa-instagram"></i></a>
-                              </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="menu-mobile">
+    <ul class="menu-mobile-nav">
+      <li><a href="/index-en.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/biografia.html">Biography</a></li>
+        <li><a href="/proyectos.html">Art</a></li>
+        <li><a href="/direcciondeproyec.html">Project Management</a></li>		
+        <li><a href="corporativo.html">Corporative</a></li>
+        <li><a href="/digital&design.html">Digital collaborations and design</a></li>
+        <li><a href="/social.html">Social</a></li>  
+        <li><a href="/patrociniosyapoyo.html">Sponsorships and support</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/admin.html">Admin</a></li>
+        <li><a href="/contacto.html">Contact</a></li>
+      <li>
+        <div class="redes-sociais">
+          <span>Social Media</span>
+          <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+            <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+          <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+            <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+          </a>
+          <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+            <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a>
+            <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+              <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
 <!-- /.menu-mobile -->
 
     <!-- BANNER TÍTULO -->
@@ -184,57 +184,70 @@
     </section>
     <!-- //BANNER TÍTULO -->
 
-    <section class="secao">
-        <div class="container">
-            <div class="row pc-form-wrp">
-                <div class="grid-6 grid-m-10 grid-s-12 pc-form">
-
-                  <form id="form-contato" action="mailto:juniorjunco@gmail.com" method="POST" class="form-validation">
-
-
-                        <div class="campo-container">
-                        <label for="nome">Name</label>
-                        <input type="text" name="nome" id="nome" maxlength="255" class="campo" data-parsley-trigger="change" placeholder="Type your Name" required />
-                        </div>
-
-                        <div class="row">
-                        <div class="grid-6 grid-m-6 grid-s-12 campo-container">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" maxlength="255" class="campo" data-parsley-trigger="change" placeholder="Type your email" required />
-                        </div>
-                        <div class="grid-6 grid-m-6 grid-s-12 campo-container">
-                            <label for="telefone">Phone</label>
-                            <input type="tel" name="telefone" id="telefone" maxlength="255" class="campo" data-parsley-trigger="change" placeholder="Type your Phone" required />
-                        </div>
-                        </div>
-
-                        <div class="campo-container">
-                            <label for="assunto">Subject</label>
-                            <select name="assunto" id="assunto" class="campo" >
-                                <option value="" hidden>Select</option>
-                                                                    <option value="">Quote</option>
-                                                                    <option value="">Social</option>
-                                                                    <option value="">Others</option>
-                                                                  
-                                                            </select>
-                            <span class="arrow"></span>
-                            <!-- <input type="text" name="assunto" id="assunto" maxlength="255" class="campo" data-parsley-trigger="change" placeholder="Digite um assunto" required /> -->
-                        </div>
-
-                        <div class="campo-container">
-                            <label for="mensagem">Message</label>
-                            <textarea name="mensagem" id="mensagem" maxlength="1000" class="campo" rows="4" data-parsley-trigger="change" placeholder="Type your Message..." required></textarea>
-                        </div>
-
-                        <div class="btn-container">	
-                            <button id="enviar" type="submit" class="btn btn-primario">Send</button>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-          
+    <section class="secao institucional">
+      <div class="container">
+        
+        <!-- FOTOS -->
+        <ul class="grid-12 projeto-det-fotos">
+          <li data-aos="fade-up"><img class="lazyload" data-src="/uploads/img/contacto/1.jpg" alt="sonrie"></li>
+              </ul>
+        <!-- //FOTOS -->
+    
+        <!-- TEXTO -->
+        <div class="grid-12" data-aos="fade-up">
+          <h3 class="texto">
+            <p></p>
+          </h3>
         </div>
+    
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="row pc-form-wrp">
+          <div class="grid-6 grid-m-10 grid-s-12 pc-form">
+            <form id="contact-form" enctype="multipart/form-data">
+              <div class="campo-container">
+                <label for="nome">Name</label>
+                <input type="text" name="nome" id="nome" maxlength="255" class="campo" placeholder="Enter your name" required />
+              </div>
+              <div class="row">
+                <div class="grid-6 grid-m-6 grid-s-12 campo-container">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" maxlength="255" class="campo" placeholder="Enter your email" required />
+                </div>
+                <div class="grid-6 grid-m-6 grid-s-12 campo-container">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" name="telefone" id="telefone" maxlength="255" class="campo" placeholder="Enter your telefone" required />
+                </div>
+              </div>
+              <div class="campo-container">
+                <label for="imagem">Send me photos of the space</label>
+                <input type="file" name="images" id="imagem" class="campo" accept="image/*" multiple required style="display: none;" />
+                <button type="button" id="custom-button">Choose photos</button>
+                <span id="custom-text">No file selected</span>
+                <div id="preview-container" style="display: flex; flex-wrap: wrap;"></div>
+              </div>
+              <div class="campo-container">
+                <label for="claridad-formato">Are you clear about the format?</label>
+                <textarea name="claridadFormato" id="claridad-formato" maxlength="1000" class="campo" rows="4" placeholder="width x height" required></textarea>
+              </div>
+              <div class="campo-container">
+                <label for="flow-idea">Hey, what do you imagine?</label>
+                <textarea name="flowIdea" id="flow-idea" maxlength="1000" class="campo" rows="4" placeholder="What is the flow of the idea" required></textarea>
+              </div>
+              <div class="campo-container">
+                <label for="fecha-entrega">When would you like to have the mural ready?</label>
+                <input type="date" name="fechaEntrega" id="fecha-entrega" class="campo" required />
+              </div>
+              <div class="btn-container">
+                <button id="enviar" type="submit" class="btn btn-primario">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
 <!-- FOOTER -->
@@ -262,10 +275,18 @@
       
 
       <!-- REDES SOCIAIS -->
-      <div class="footer-bloco redes-sociais">
-                  
-                                  <a href="https://www.instagram.com/marion.ve/" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                      </div>
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/marion.ve/" target="_blank" class="rede" title="Instagram">
+          <img src="/uploads/img/loja_logo/redes/instagram.png" alt="instagram"></a>
+        <a href="https://x.com/marionve_" target="_blank" class="rede" title="twitter"> 
+          <img src="/uploads/img/loja_logo/redes/twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.youtube.com/@marionve7145" target="_blank" class="rede" title="youtube">
+          <img src="/uploads/img/loja_logo/redes/youtube.png" alt="youtube"></a>   
+          <a href="https://wa.me/message/KMIJX5WY37ETC1" target="_blank" class="rede" title="Whatsapp">
+            <img src="/uploads/img/loja_logo/redes/whatsapp.png" alt="Whatsapp"></a>         
+                          
+      </div>
       <!-- //REDES SOCIAIS -->
 
     </div>
@@ -273,8 +294,7 @@
 </footer>
 <!-- //FOOTER -->
 
-<!-- GERAIS -->
-<!-- VOLTAR AO TOPO -->
+ 
 <div class="gotop"></div>
 
 <!-- LOADING -->
@@ -306,7 +326,7 @@
 </div>
 <!-- //ALERTA -->
 
-<span id="infos" data-url-base="https://www.eduardokobra.com/"></span>
+<span id="infos" data-url-base=""></span>
 
 <!-- SCRIPTS -->
 <script src="https://www.google.com/recaptcha/api.js?onload=initRecaptcha&render=explicit" async defer></script>
@@ -314,7 +334,52 @@
 <script src="/app/assets/dist/js/script.min.js?v=10"></script>
 <script src="/app/assets/dist/js/languageSelector.js"></script>
 <script>
+  document.getElementById('custom-button').addEventListener('click', function() {
+    document.getElementById('imagem').click();
+  });
 
+  document.getElementById('imagem').addEventListener('change', function() {
+    const input = document.getElementById('imagem');
+    const previewContainer = document.getElementById('preview-container');
+    const customText = document.getElementById('custom-text');
+
+    previewContainer.innerHTML = '';
+    customText.textContent = input.files.length > 0 ? `${input.files.length} archivo(s) seleccionado(s)` : 'Ningún archivo seleccionado';
+
+    Array.from(input.files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.width = '100px';
+        img.style.margin = '5px';
+        previewContainer.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch('https://blog-pro-gamma.vercel.app/send-email', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        alert('Correo enviado con éxito.');
+      } else {
+        alert('Error al enviar el correo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error al enviar el correo.');
+    }
+  });
 </script>
 </body>
 </html>
